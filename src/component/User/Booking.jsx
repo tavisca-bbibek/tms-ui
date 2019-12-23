@@ -72,15 +72,21 @@ class Booking extends Component {
    render(){
     const addPassengerBtn = <button onClick={this.addPassengerDetails}>Add</button>;
     return (
-      <div>
+      <div className='passenger-container'>
         <div>
+            <div >
+              <label>Train Number: </label>
+              <span>{this.props.train.id}</span>
+              <label>Train Name: </label>  
+              <span>{this.props.train.name}</span>
+            </div>
           <div>
-            {this.props.train.id} | {this.props.train.name}
-          </div>
-          <div>
-            <div>Date:{this.props.train.date}</div>
-            <div>Source:{this.props.train.source}</div>
-            <div>Destination:{this.props.train.destination}</div>
+            <label>Date: </label>
+            <span>{this.props.train.date}</span>
+            <label>Source: </label>
+            <span>{this.props.train.source}</span>
+            <label>Destination: </label>
+            <span>{this.props.train.destination}</span>
           </div>
         </div>
         <div>

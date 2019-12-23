@@ -154,7 +154,7 @@ class EditTrain extends Component {
     );
 
     return (
-      <div className="add-train">
+      <div className="admin-container">
         {trainDetails}
         {trainRoute}
         <span>{`Number of stops: ${this.state.stops.length - 2}`}</span>

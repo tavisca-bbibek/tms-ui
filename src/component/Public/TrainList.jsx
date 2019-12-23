@@ -70,7 +70,7 @@ class TrainList extends Component {
                 <th>Departure</th>
                 <th>Arrival</th>
                 <th>Destination</th>
-                <th>Availability</th>
+                {!this.state.isAdmin && <th>Availability</th>}
                 {this.state.isAdmin && <th>Edit</th>}
                 {this.state.isAdmin && <th>Delete</th>}
               </tr>
@@ -85,7 +85,9 @@ class TrainList extends Component {
                   <td>{train.departureTime}</td>
                   <td>{train.arrivalTime}</td>
                   <td>{train.destination}</td>
-                  <td>{this.availabilityPopup("Availability", train)}</td>
+                  {!this.state.isAdmin && (
+                    <td>{this.availabilityPopup("Availability", train)}</td>
+                  )}
                   {this.state.isAdmin && (
                     <td>
                       <Link to="/admin/edit_train">

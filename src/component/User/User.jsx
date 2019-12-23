@@ -1,4 +1,4 @@
-import React, { Component, Fragment as Switch } from "react";
+import React, { Component, Fragment as Fragment } from "react";
 import { Route, Redirect } from "react-router-dom";
 
 import authentication from "../../auth/authentication";
@@ -17,11 +17,10 @@ class User extends Component {
 
   render() {
     if (!authentication.isLoggedIn()) return <Redirect to="/login" />;
-
-    console.log(this.props);
     return (
-      <Switch>
+      <Fragment>
         <Route
+          {...this.props}
           path="/user/tickets"
           component={TicketContainer}
         />
@@ -32,7 +31,7 @@ class User extends Component {
             <Redirect to="/" />
           )}
         </Route>
-      </Switch>
+      </Fragment>
     );
   }
 }

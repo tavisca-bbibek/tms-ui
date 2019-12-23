@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
-
-import authentication from "../../auth/authentication";
+import React, { Component } from "react";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 import Search from "./Search";
 import TrainList from "./TrainList";
-import NavBar from "../NavBar/NavBar";
 import User from "../User/User";
 import Admin from "../Admin/Admin";
+import NavBar from "../NavBar/NavBar";
+import Login from '../Auth/Login';
+import Register from '../Auth/Register';
 
 class Home extends Component {
   state = {
@@ -33,18 +33,25 @@ class Home extends Component {
   }
 
   render() {
+
+    const home = _ => (
+      <div className="home-container">
+        <Search search={this.loadTrains} />
+        <TrainList trains={this.state.trains} />
+      </div>
+    );
+
     return (
-      <Fragment>
+      <Router>
         <NavBar />
-        <div className="home-container">
-          <Search search={this.loadTrains} />
-          <TrainList trains={this.state.trains} />
-        </div>
         <Switch>
-          <Route path="/user" component={User} />
+          <Route path="/" exact component={home} />
           <Route path="/admin" component={Admin} />
+          <Route path="/user" component={User} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
         </Switch>
-      </Fragment>
+      </Router>
     );
   }
 }

@@ -32,12 +32,10 @@ class Login extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState(this.getEmptyState());
-    console.log(this.state);
     authentication.login(this.state.email, this.state.password);
   }
 
   render() {
-    console.log("In Admin");
     if (authentication.isLoggedIn()) return <Redirect to="/" />;
 
     return (

@@ -28,7 +28,7 @@ class Authentication {
 
   login(username, password) {
     //Api call;
-    const user = { name: "Anoop", role: ROLE_ADMIN, username, password };
+    const user = { name: "Anoop", role: ROLE_USER, username, password };
     localStorage.setItem(USER_DETAILS, JSON.stringify(user));
   }
 }

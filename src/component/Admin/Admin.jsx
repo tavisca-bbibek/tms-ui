@@ -12,12 +12,13 @@ class Admin extends Component {
   }
 
   render(){
+    console.log("-----------------------------------In admin");
     if (!authentication.isLoggedIn()) return <Redirect to="/login" />;
     return (
-      <Switch>
+      <Fragment >
         <Route path="/admin/add_train" component={EditTrain} />
         <Route path="/admin/edit_train" {...this.props} component={EditTrain} />
-      </Switch>
+      </Fragment>
     );
   }
 }
