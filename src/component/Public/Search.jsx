@@ -1,7 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-
-import NavBar from './NavBar';
 
 class Search extends React.Component {
 
@@ -44,10 +41,8 @@ class Search extends React.Component {
     const now = new Date();
     const afterOneWeek = new Date();
     afterOneWeek.setDate(now.getDate() + 7);
-    console.log(afterOneWeek);
     return (
-      <div>
-        <div>
+      <div className='search-container'>
           <label>Source:</label>
           <input
             placeholder="Source"
@@ -78,7 +73,6 @@ class Search extends React.Component {
           />
           <br />
             <button onClick={this.search}>Search</button>
-        </div>
       </div>
     );
   }

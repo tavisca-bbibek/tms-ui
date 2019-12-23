@@ -59,7 +59,7 @@ class TrainList extends Component {
   render() {
     return (
       this.props.trains.length > 0 && (
-        <div>
+        <div className="trainlist-container">
           <table>
             <thead>
               <tr>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import EditPassengerDetails from './EditPassengerDetails.js';
+import EditPassengerDetails from './EditPassengerDetails';
 
 class Booking extends Component {
 

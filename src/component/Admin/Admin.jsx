@@ -1,4 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+import {Redirect, Route, Switch} from 'react-router-dom';
+
+import authentication from '../../auth/authentication';
+
 import EditTrain from './EditTrain';
 
 class Admin extends Component {
@@ -8,10 +12,12 @@ class Admin extends Component {
   }
 
   render(){
+    if (!authentication.isLoggedIn()) return <Redirect to="/login" />;
     return (
-      <div>
-        <EditTrain />
-      </div>
+      <Switch>
+        <Route path="/admin/add_train" component={EditTrain} />
+        <Route path="/admin/edit_train" {...this.props} component={EditTrain} />
+      </Switch>
     );
   }
 }

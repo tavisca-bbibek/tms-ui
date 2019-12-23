@@ -1,0 +1,338 @@
+/***************************
+Navigation bar
+***************************/
+.nav-bar{
+    height: 60px;
+    width:100%;
+    background-color: #333;
+    font-family: OpenSans,Helvetica;
+    color:white;
+    line-height: 1.30;
+    font-size:20px;
+    letter-spacing: 1.5px;
+    font-weight: lighter;
+    
+  }
+
+  .logo-container{
+    float:left;
+    margin-top:15px;
+    margin-left:60px;
+  }
+
+  .controls .user-info{
+    float:left;
+    margin-top:15px;
+    margin-left:60px;
+  }
+
+  .logo-container span {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  /* .login-user-details{
+    position: absolute; 
+    left: 50%; 
+    margin-top: -100px; 
+    margin-left: -100px; 
+  } */
+
+  .login-user-details li{
+    float : right;
+    display: block;
+    text-align: center;
+  }
+
+  #show-name{
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .logo-container a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .user-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .logo-container a:hover {
+    background-color: #111;
+  }
+
+  /*****************************
+  Login
+  *****************************/
+
+  .login{
+    margin-left: 500px;
+    margin-top: 90px;
+    float: left;
+    position: relative;
+    border: 5px solid rgb(140, 143, 140);
+    padding: 10px;
+    color:white;
+    background-color: #333;
+  }
+
+  .login button{
+    display: block;
+    width: 100px; 
+    font-size:18px;
+    height: 30px;  
+}
+
+.login input {
+    display: block;
+    width: 300px; 
+    font-size:20px;
+    height: 30px;  
+}
+
+.login a {
+    display: block;
+    width: 300px; 
+    font-size:20px;
+    height: 30px; 
+    color: white;
+}
+
+/*******************************
+Admin Container
+*******************************/
+
+.admin-container{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 5%;
+    float: center;
+    position: relative;
+    border: 5px solid rgb(140, 143, 140);
+    padding: 10px;
+    color:white;
+    background-color: #333;
+  }
+
+  .admin-container button{
+    display: block;
+    width: 100px; 
+    font-size:18px;
+    height: 30px;
+    background-color: rgb(155, 75, 75);
+    color: white;  
+}
+
+.admin-container input {
+    display: block;
+    width: 500px; 
+    font-size:20px;
+    height: 30px;  
+}
+
+.admin-container a {
+    display: block;
+    width: 300px; 
+    font-size:20px;
+    height: 30px; 
+    color: white;
+}
+
+  /*******************************
+  Search Box
+  ******************************/
+
+  .search-container {
+    margin-left: 30px;
+    margin-top: 5%;
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 370px;
+    border: 5px solid rgb(140, 143, 140);
+    padding: 10px;
+    background-color: #333;
+  }
+
+  label{
+      color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 14px 16px;
+    font-size:20px;
+    text-decoration: none;
+  }
+  .search-container input {
+      display: block;
+      width: 300px; 
+      font-size:20px;
+      height: 30px;  
+  }
+
+  .search-container button{
+      display: block;
+      width: 100px; 
+      font-size:18px;
+      height: 30px;  
+  }
+
+  /**********************
+  Passenger Data Page
+  **********************/
+  .passenger-container {
+    margin-left: 50px;
+    margin-top: 5%;
+    float: left;
+    position: relative;
+    border: 5px solid rgb(140, 143, 140);
+    padding: 10px;
+    background-color: #333;
+  }
+
+  label{
+      color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 14px 16px;
+    font-size:20px;
+    text-decoration: none;
+  }
+  .passenger-container input {
+      width: 300px; 
+      font-size:18px;
+      height: 24px;  
+  }
+
+  .passenger-container button{
+      width: 100px; 
+      font-size:18px;
+      height: 30px;  
+  }
+
+  .passenger-container select{
+    width: 100px; 
+    font-size:18px;
+    height: 30px;  
+}
+
+.passenger-container span{
+    color: white;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size:18px;
+  }
+
+  /**********************
+  Table
+  **********************/
+
+  .trainlist-container{
+    display: block;
+    margin-left: 100px;
+    margin-top: 5%;
+    float: left;
+    position: relative;
+      font-size:20px;
+      border: 5px solid rgb(140, 143, 140);
+    padding: 10px;
+    background-color: #333;
+  }
+
+  .trainlist-container table thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .trainlist-container {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+  }
+  .trainlist-container td, .trainlist-container th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  .trainlist-container tbody td {
+    font-size: 13px;
+    color: #FFFFFF;
+  }
+  .trainlist-container tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+
+
+  /*******************
+  Pop up
+  ********************/
+
+  .popup {
+    font-size: 12px;
+    background: #333;
+  }
+
+  .popup > .header {
+    width: 100%;
+    border-bottom: 1px solid rgb(209, 201, 201);
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .popup > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #333;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+
+  /****************************
+  Train Schedule
+  ****************************/
+  .train-data label{
+    padding: 14px 16px;
+    font-size:12px;
+  }
+
+  .train-data span{
+    color: white;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size:12px;
+  }
+
+
+

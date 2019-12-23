@@ -21,8 +21,7 @@ class TicketContainer extends React.Component {
   }
 
   componentDidMount(){
-    const userId = authentication.getUser().id;
-      //Make Api call
+    //Make api call
       this.setState({
         tickets: [
           this.generateTicket(1, 444, [this.generatePassenger('Anoop', 12, 'Male'), this.generatePassenger('Anoop', 12, 'Male')])

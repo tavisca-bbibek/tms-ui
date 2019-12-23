@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
-import {Route, Redirect} from 'react-router-dom';
+import React, { Component, Fragment as Switch } from "react";
+import { Route, Redirect } from "react-router-dom";
 
-import authentication from '../../auth/authentication';
+import authentication from "../../auth/authentication";
 
-import Booking from './Booking';
-import TicketContainer from './TicketContainer';
+import Booking from "./Booking";
+import TicketContainer from "./TicketContainer";
+import NavBar from "../NavBar/NavBar";
+import Search from "../Public/Search";
+import TrainList from "../Public/TrainList";
 
 class User extends Component {
   state = {};
@@ -12,16 +15,14 @@ class User extends Component {
     super(props);
   }
 
-  render(){
-    const user = authentication.getUser();
-    if(user === undefined)
-      return <Redirect to='/login' />
+  render() {
+    if (!authentication.isLoggedIn()) return <Redirect to="/login" />;
 
+    console.log(this.props);
     return (
-      <div className="user-container">
+      <Switch>
         <Route
           path="/user/tickets"
-          {...this.props}
           component={TicketContainer}
         />
         <Route path="/user/booking" {...this.props}>
@@ -31,7 +32,7 @@ class User extends Component {
             <Redirect to="/" />
           )}
         </Route>
-      </div>
+      </Switch>
     );
   }
 }
